@@ -1,0 +1,19 @@
+body{
+  background:#0f121f;
+  background-repeat: no-repeat;
+  color: #ffffff; 
+}
+
+body *{
+  font-family: Ubuntu;
+}
+
+h1,h2,h3,h4,h5{
+  font-weight: normal;
+  margin: 0;
+}
+
+a,a:hover, a:visited{
+  color: #ffffff;
+  text-decoration: none;
+}
