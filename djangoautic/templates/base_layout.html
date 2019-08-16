@@ -11,6 +11,16 @@
 <body>
   <div class="wrapper">
     <h1><a href="{% url 'articles:list' %}"><img src="{% static 'Django.png' %}" alt=""></a></h1>
+    <nav>
+      <ul>
+        <li>
+          <form action="{%url 'accounts:logout' %}" class="logout-link" method="post">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+          </form>
+        </li>
+      </ul>
+    </nav>
     {% block content %}
     {% endblock %}
   </div>
