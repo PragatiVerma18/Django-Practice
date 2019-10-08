@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+ 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Count</title>
+</head>
+<body>
+  <div class="container">
+    <div class="block">
+      <h1 class="title">Count</h1>
+      <a class="button is-danger" style="margin-bottom: 30px;" href="{%  url 'home' %}">Start Again</a>
+      <div class="card">
+        <div class="card-header has-background-primary">
+          <div class="card-header-title">There are {{ count }} words in your text</div>
+        </div>
+        <div class="card-content">
+          {{ fulltext }}
+        </div>
+      </div>
+
+      <div class="block" style="margin-bottom: 30px; margin-top: 30px;">
+          <h1 class="title is-4">Word Count:</h1>
+  <ul class="list">
+          {% for word, counttotal in worddic  %}
+<li class="list-item is-size-5	">
+{{ word }} - {{counttotal}}
+</li>
+          {% endfor %}
+        </ul>
+        </div>
+
+
+    </div>
+  </div>
+</body>
+</html>
